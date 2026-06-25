@@ -1,0 +1,193 @@
+# ==========================
+# НАВИГАЦИЯ
+# ==========================
+
+pwd
+ls
+ls -la
+
+cd ..
+cd ~
+
+mkdir test
+rmdir test
+
+touch file.txt
+cat file.txt
+nano file.txt
+
+cp file.txt copy.txt
+mv copy.txt newfile.txt
+
+rm file.txt
+rm -r folder
+
+clear
+
+
+# ==========================
+# ОБНОВЛЕНИЕ СИСТЕМЫ
+# ==========================
+
+sudo apt update
+sudo apt upgrade -y
+sudo apt autoremove -y
+
+
+# ==========================
+# УСТАНОВКА ПРОГРАММ
+# ==========================
+
+sudo apt install openssh-server -y
+sudo apt install net-tools -y
+sudo apt install htop -y
+sudo apt install curl -y
+sudo apt install wget -y
+
+
+# ==========================
+# SSH СЕРВЕР
+# ==========================
+
+sudo systemctl enable ssh
+sudo systemctl start ssh
+sudo systemctl restart ssh
+sudo systemctl stop ssh
+sudo systemctl status ssh
+
+sudo nano /etc/ssh/sshd_config
+
+hostname -I
+
+ssh localhost
+
+ssh username@192.168.1.100
+
+scp file.txt username@192.168.1.100:/home/username/
+
+scp username@192.168.1.100:/home/username/file.txt .
+
+
+# ==========================
+# SYSTEMCTL
+# ==========================
+
+systemctl list-units --type=service
+
+sudo systemctl start apache2
+sudo systemctl stop apache2
+sudo systemctl restart apache2
+sudo systemctl enable apache2
+sudo systemctl disable apache2
+systemctl status apache2
+
+
+# ==========================
+# СЕТЬ
+# ==========================
+
+ip a
+
+ip route
+
+ping google.com
+
+curl ifconfig.me
+
+wget https://example.com
+
+ss -tulpn
+
+netstat -tulpn
+
+
+# ==========================
+# ПРОЦЕССЫ
+# ==========================
+
+ps
+
+ps aux
+
+top
+
+htop
+
+kill PID
+
+kill -9 PID
+
+
+# ==========================
+# ПРАВА
+# ==========================
+
+ls -l
+
+chmod +x file.sh
+
+chmod 755 file.sh
+
+chmod 777 file.sh
+
+chown $USER:$USER file.sh
+
+
+# ==========================
+# ПОИСК ФАЙЛОВ
+# ==========================
+
+find . -name "*.txt"
+
+grep "text" file.txt
+
+head file.txt
+
+tail file.txt
+
+wc -l file.txt
+
+
+# ==========================
+# АРХИВЫ
+# ==========================
+
+tar -czf archive.tar.gz folder
+
+tar -xzf archive.tar.gz
+
+zip archive.zip file.txt
+
+unzip archive.zip
+
+
+# ==========================
+# ИНФОРМАЦИЯ О СИСТЕМЕ
+# ==========================
+
+whoami
+
+hostname
+
+uname -a
+
+df -h
+
+free -h
+
+history
+
+
+# ==========================
+# PYTHON
+# ==========================
+
+python3 --version
+
+python3 script.py
+
+pip3 install numpy
+
+pip3 list
+
+pip3 freeze
